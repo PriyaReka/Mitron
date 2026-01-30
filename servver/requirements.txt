@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+motor
+pydantic
+python-dotenv
+passlib[bcrypt]
+pyjwt
+python-multipart
+certifi
+pyserial
+scikit-learn
+pandas
+groq
+aiohttp
+gTTS
+edge-tts
+joblib
