@@ -1,0 +1,221 @@
+
+export const cropPhases = {
+    rice: [
+        { name: "Land Preparation", startDay: 1, endDay: 15, color: "bg-amber-500", description: "Plowing and leveling" },
+        {
+            name: "Nursery & Sowing",
+            startDay: 16,
+            endDay: 35,
+            color: "bg-green-500",
+            description: "Seed preparation and nursery",
+        },
+        {
+            name: "Transplanting",
+            startDay: 36,
+            endDay: 45,
+            color: "bg-blue-500",
+            description: "Moving seedlings to main field",
+        },
+        {
+            name: "Vegetative Growth",
+            startDay: 46,
+            endDay: 85,
+            color: "bg-emerald-500",
+            description: "Plant growth and tillering",
+        },
+        {
+            name: "Reproductive Phase",
+            startDay: 86,
+            endDay: 110,
+            color: "bg-purple-500",
+            description: "Flowering and grain formation",
+        },
+        {
+            name: "Maturation",
+            startDay: 111,
+            endDay: 120,
+            color: "bg-orange-500",
+            description: "Grain filling and ripening",
+        },
+        { name: "Harvesting", startDay: 121, endDay: 125, color: "bg-yellow-500", description: "Crop harvesting" },
+    ],
+    wheat: [
+        {
+            name: "Land Preparation",
+            startDay: 1,
+            endDay: 10,
+            color: "bg-amber-500",
+            description: "Plowing and seed bed preparation",
+        },
+        { name: "Sowing", startDay: 11, endDay: 20, color: "bg-green-500", description: "Seed sowing" },
+        {
+            name: "Germination",
+            startDay: 21,
+            endDay: 35,
+            color: "bg-blue-500",
+            description: "Seed germination and emergence",
+        },
+        {
+            name: "Vegetative Growth",
+            startDay: 36,
+            endDay: 75,
+            color: "bg-emerald-500",
+            description: "Tillering and stem elongation",
+        },
+        {
+            name: "Reproductive Phase",
+            startDay: 76,
+            endDay: 110,
+            color: "bg-purple-500",
+            description: "Flowering and grain formation",
+        },
+        {
+            name: "Maturation",
+            startDay: 111,
+            endDay: 125,
+            color: "bg-orange-500",
+            description: "Grain filling and ripening",
+        },
+        { name: "Harvesting", startDay: 126, endDay: 130, color: "bg-yellow-500", description: "Crop harvesting" },
+    ],
+    default: [
+        { name: "Land Preparation", startDay: 1, endDay: 15, color: "bg-amber-500", description: "Soil preparation" },
+        { name: "Sowing", startDay: 16, endDay: 25, color: "bg-green-500", description: "Seed sowing" },
+        { name: "Growth Phase", startDay: 26, endDay: 80, color: "bg-emerald-500", description: "Plant growth" },
+        { name: "Maturation", startDay: 81, endDay: 110, color: "bg-orange-500", description: "Crop maturation" },
+        { name: "Harvesting", startDay: 111, endDay: 120, color: "bg-yellow-500", description: "Harvesting" },
+    ],
+};
+
+export const activities = {
+    rice: [
+        { type: "plowing", description: "Deep plowing and puddling", color: "bg-amber-600", icon: "🚜" },
+        { type: "sowing", description: "Nursery preparation and sowing", color: "bg-green-600", icon: "🌱" },
+        { type: "watering", description: "Maintain water level 2-5cm", color: "bg-blue-600", icon: "💧" },
+        { type: "fertilizer", description: "Apply NPK fertilizer", color: "bg-green-700", icon: "🧪" },
+        { type: "weeding", description: "Remove weeds manually or chemically", color: "bg-amber-700", icon: "🌿" },
+        { type: "harvesting", description: "Harvest when 80% grains are golden", color: "bg-yellow-600", icon: "🌾" },
+    ],
+    wheat: [
+        { type: "plowing", description: "Prepare fine seed bed", color: "bg-amber-600", icon: "🚜" },
+        { type: "sowing", description: "Sow seeds at proper depth", color: "bg-green-600", icon: "🌱" },
+        { type: "watering", description: "Irrigate at critical stages", color: "bg-blue-600", icon: "💧" },
+        { type: "fertilizer", description: "Apply urea and DAP", color: "bg-green-700", icon: "🧪" },
+        { type: "weeding", description: "Control weeds in early stages", color: "bg-amber-700", icon: "🌿" },
+        { type: "harvesting", description: "Harvest when grains are hard", color: "bg-yellow-600", icon: "🌾" },
+    ],
+};
+
+export const enhancedFertilizers = {
+    rice: [
+        {
+            name: "Urea",
+            type: "Chemical",
+            application: "Split doses during vegetative growth",
+            npk: "46-0-0",
+            amount: "120 kg/hectare",
+            timing: "30, 45, 60 days after transplanting",
+            cost: 266,
+            method: "Broadcasting and incorporation",
+        },
+        {
+            name: "DAP",
+            type: "Chemical",
+            application: "Basal application before transplanting",
+            npk: "18-46-0",
+            amount: "100 kg/hectare",
+            timing: "At transplanting",
+            cost: 1350,
+            method: "Deep placement",
+        },
+        {
+            name: "Potash (MOP)",
+            type: "Chemical",
+            application: "During panicle initiation",
+            npk: "0-0-60",
+            amount: "60 kg/hectare",
+            timing: "45-50 days after transplanting",
+            cost: 840,
+            method: "Broadcasting",
+        },
+        {
+            name: "Vermicompost",
+            type: "Organic",
+            application: "Mix with soil before transplanting",
+            npk: "1-1-1",
+            amount: "2-3 tonnes/hectare",
+            timing: "15 days before transplanting",
+            cost: 4000,
+            method: "Soil incorporation",
+        },
+    ],
+    wheat: [
+        {
+            name: "Urea",
+            type: "Chemical",
+            application: "Split application at sowing and tillering",
+            npk: "46-0-0",
+            amount: "130 kg/hectare",
+            timing: "Half at sowing, half at tillering",
+            cost: 289,
+            method: "Broadcasting and irrigation",
+        },
+        {
+            name: "DAP",
+            type: "Chemical",
+            application: "Full dose at sowing",
+            npk: "18-46-0",
+            amount: "100 kg/hectare",
+            timing: "At sowing time",
+            cost: 1350,
+            method: "Drill application",
+        },
+        {
+            name: "MOP",
+            type: "Chemical",
+            application: "At sowing time",
+            npk: "0-0-60",
+            amount: "50 kg/hectare",
+            timing: "At sowing",
+            cost: 700,
+            method: "Broadcasting",
+        },
+    ],
+};
+
+export const cropDiseases = {
+    rice: [
+        {
+            name: "Blast",
+            symptoms: "Diamond-shaped lesions on leaves",
+            chemical: "Tricyclazole 75% WP",
+            organic: "Neem oil spray, resistant varieties",
+        },
+        {
+            name: "Brown Spot",
+            symptoms: "Brown spots with yellow halo",
+            chemical: "Mancozeb 75% WP",
+            organic: "Proper water management, balanced nutrition",
+        },
+        {
+            name: "Bacterial Blight",
+            symptoms: "Water-soaked lesions on leaves",
+            chemical: "Streptocycline + Copper oxychloride",
+            organic: "Crop rotation, clean cultivation",
+        },
+    ],
+    wheat: [
+        {
+            name: "Rust",
+            symptoms: "Orange-red pustules on leaves",
+            chemical: "Propiconazole 25% EC",
+            organic: "Resistant varieties, proper spacing",
+        },
+        {
+            name: "Powdery Mildew",
+            symptoms: "White powdery growth on leaves",
+            chemical: "Sulfur 80% WP",
+            organic: "Neem extract, avoid excess nitrogen",
+        },
+    ],
+};
